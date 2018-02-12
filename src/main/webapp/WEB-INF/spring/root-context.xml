@@ -40,7 +40,6 @@
 		class="org.springframework.context.support.ResourceBundleMessageSource">
 		<property name="basenames">
 			<list>
-				<value>message.label</value>
 				<value>message.error</value>
 			</list>
 		</property>
