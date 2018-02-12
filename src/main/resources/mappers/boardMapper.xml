@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mappers.boardMapper">
+	
+	<!-- 랭크 시작 -->
+	<!-- 전체 랭크 -->
+	<select id="allRankBoard" resultType="com.spring.cfk.vo.BoardVO">
+		select board_writer,board_subject,board_content,board_real_file,board_date,board_vote,board_thumbnail,user_age,board_num from cfk_board,cfk_user where cfk_board.board_writer=cfk_user.user_id order by board_vote desc limit 4
+	</select>
+	<!-- 남자 랭크 -->
+	<select id="maleRankBoard" resultType="com.spring.cfk.vo.BoardVO">
+		select board_writer,board_subject,board_content,board_real_file,board_date,board_vote,board_thumbnail,user_gender,board_num from cfk_board,cfk_user where cfk_board.board_writer=cfk_user.user_id and cfk_user.user_gender='남' order by board_vote desc limit 4
+	</select>
+	<!-- 여자 랭크 -->
+	<select id="femaleRankBoard" resultType="com.spring.cfk.vo.BoardVO">
+		select board_writer,board_subject,board_content,board_real_file,board_date,board_vote,board_thumbnail,user_gender,board_num from cfk_board,cfk_user where cfk_board.board_writer=cfk_user.user_id and cfk_user.user_gender='여' order by board_vote desc limit 4
+	</select>
+	<!-- 서울,경기 랭크 -->
+	<select id="seokyoungRankBoard" resultType="com.spring.cfk.vo.BoardVO">
+		select board_writer,board_subject,board_content,board_real_file,board_date,board_vote,board_thumbnail,user_gender,board_num from cfk_board,cfk_user where cfk_board.board_writer=cfk_user.user_id and cfk_user.user_area='서울.경기' order by board_vote desc limit 4
+	</select>
+	<!-- 강원 랭크 -->
+	<select id="kangwonRankBoard" resultType="com.spring.cfk.vo.BoardVO">
+		select board_writer,board_subject,board_content,board_real_file,board_date,board_vote,board_thumbnail,user_gender,board_num from cfk_board,cfk_user where cfk_board.board_writer=cfk_user.user_id and cfk_user.user_area='강원도' order by board_vote desc limit 4
+	</select>
+	<!-- 충청 랭크 -->
+	<select id="chungcheongRankBoard" resultType="com.spring.cfk.vo.BoardVO">
+		select board_writer,board_subject,board_content,board_real_file,board_date,board_vote,board_thumbnail,user_gender,board_num from cfk_board,cfk_user where cfk_board.board_writer=cfk_user.user_id and cfk_user.user_area='충청권' order by board_vote desc limit 4
+	</select>
+	<!-- 호남,제주 랭크 -->
+	<select id="honamjejuRankBoard" resultType="com.spring.cfk.vo.BoardVO">
+		select board_writer,board_subject,board_content,board_real_file,board_date,board_vote,board_thumbnail,user_gender,board_num from cfk_board,cfk_user where cfk_board.board_writer=cfk_user.user_id and cfk_user.user_area='호남.제주' order by board_vote desc limit 4
+	</select>
+	<!-- 영남 랭크 -->
+	<select id="youngnamRankBoard" resultType="com.spring.cfk.vo.BoardVO">
+		select board_writer,board_subject,board_content,board_real_file,board_date,board_vote,board_thumbnail,user_gender,board_num from cfk_board,cfk_user where cfk_board.board_writer=cfk_user.user_id and cfk_user.user_area='영남권' order by board_vote desc limit 4
+	</select>
+	<!-- 랭크 끝 -->
+	
+</mapper>	

@@ -10,17 +10,22 @@
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
 	
 	<!-- Enables the Spring MVC @Controller programming model -->
-	<annotation-driven />
+	<annotation-driven />	
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
-
+	<resources mapping="/MainCss/**" location="/resources/css/main/" /> 
+	<resources mapping="/images/**" location="/resources/images/" /> 
+	<resources mapping="/js/**" location="/resources/js/" />
+	<resources mapping="/fonts/**" location="/resources/fonts/" /> 
+	
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
+	<!-- @Component 자동 스캔 -->
 	<context:component-scan base-package="com.spring.cfk" />
 	
 	
