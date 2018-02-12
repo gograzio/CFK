@@ -15,7 +15,8 @@
                 <p>회원가입 하시면 많은 혜택을 누리실 수 있습니다.</p>                
         		</div>
         		<form:form action="/cfk/regist" name="userInfo" modelAttribute="userInfo">
-					<table align="center">
+        		<div align="center">
+					<table>
 						<tr>
 							<td>
 								<p><font color="black">아이디</font></p>
@@ -88,6 +89,7 @@
 							</td>
 						</tr>
 					</table>
+				</div>	
 				</form:form>
         	</div>
         </div>
