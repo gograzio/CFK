@@ -53,6 +53,12 @@ public class HomeController {
 		
 		return "home";
 	
+	}
 	
+	@RequestMapping(value="/regist")
+	public String registView() {	
+		
+		logger.info("회원가입 뷰 요청 ");
+		return "/view/regist";	
 	}
 }

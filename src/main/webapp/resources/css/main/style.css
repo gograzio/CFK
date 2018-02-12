@@ -386,7 +386,7 @@ p {
 /* Third section use background image */
 .third-section {
     padding-bottom: 70px;
-    background: #181A1C url(../images/background/client-bg.png) no-repeat center;
+    background: #181A1C url(../images/client/client-bg.png) no-repeat center;
 }
 .third-section .container {
     padding-top:20px;
