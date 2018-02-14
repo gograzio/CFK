@@ -29,18 +29,18 @@
 						</tr>
 						<tr>
 							<td><p><font color="black">비밀번호</font></p></td>
-							<td><input class="span5" type="password" name="user_passwd" maxlength="12"></td>
-							<form:errors path="user_passwd"/>
+							<td><input class="span5" type="password" name="user_passwd" maxlength="12">
+							<form:errors path="user_passwd"/></td>
 						</tr>
 						<tr>
 							<td><p><font color="black">비밀번호 확인</font></p></td>
-							<td><input class="span5" type="password" name="user_chk_passwd" maxlength="12"></td>
-							<form:errors path="user_chk_passwd"/>
+							<td><input class="span5" type="password" name="user_chk_passwd" maxlength="12">
+							<form:errors path="user_chk_passwd"/></td>
 						</tr>
 						<tr>
 							<td><p><font color="black">이름</font></p></td>
-							<td><input class="span5" type="text" name="user_name" value="${userInfo.user_name}" maxlength="12"></td>
-							<form:errors path="user_name"/>
+							<td><input class="span5" type="text" name="user_name" value="${userInfo.user_name}" maxlength="12">
+							<form:errors path="user_name"/></td>
 						</tr>
 						<tr>
 							<td><p><font color="black">지역</font></p></td>
@@ -56,23 +56,22 @@
 						</tr>
 						<tr>
 							<td><p><font color="black">주소</font></p></td>
-							<td><input class="span5" type="text" name="user_addr" value="${userInfo.user_addr}" maxlength="50"></td>
-							<form:errors path="user_addr"/>
+							<td><input class="span5" type="text" name="user_addr" value="${userInfo.user_addr}" maxlength="50">
+							<form:errors path="user_addr"/></td>
 						</tr>
 						<tr>
 							<td><p><font color="black">전화번호</font></p></td>
-							<td><input class="span5" type="text" name="user_tel" value="${userInfo.user_tel}" maxlength="30"></td>
-							<form:errors path="user_tel"/>
+							<td><input class="span5" type="text" name="user_tel" value="${userInfo.user_tel}" maxlength="30">
+							<form:errors path="user_tel"/></td>
 						</tr>
 						<tr>
 							<td><p><font color="black">나이</font></p></td>
 							<td><input class="span5" type="text" name="user_age" value="${userInfo.user_age}" maxlength="3"></td>
-							<form:errors path="user_age"/>
 						</tr>
 						<tr>
 							<td><p><font color="black">이메일</font></p></td>
-							<td><input class="span5" type="email" name="user_email" value="${userInfo.user_email}" placeholder="username@example.com" maxlength="30"></td>
-							<form:errors path="user_email"/>
+							<td><input class="span5" type="email" name="user_email" value="${userInfo.user_email}" placeholder="username@example.com" maxlength="30">
+							<form:errors path="user_email"/></td>
 						</tr>
 						<tr>
 							<td><p><font color="black">성별</font></p></td>
@@ -84,7 +83,7 @@
 						<tr>
 							<td align="center" colspan="2" class="btn_align">
 								<input class="message-btn" type="submit" value="가입하기">
-								<input class="message-btn" type="reset" value="새로입력">
+								<input class="message-btn" type="reset" value="새로입력" onclick="location.href='/cfk/regist'">
 								<input class="message-btn" type="button" value="취소" onclick="javascript:history.back();">
 							</td>
 						</tr>
