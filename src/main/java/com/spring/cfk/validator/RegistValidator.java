@@ -45,7 +45,6 @@ public class RegistValidator implements Validator {
 		ValidationUtils.rejectIfEmpty(errors, "user_name", "required");
 		ValidationUtils.rejectIfEmpty(errors, "user_addr", "required");
 		ValidationUtils.rejectIfEmpty(errors, "user_tel", "required");
-		ValidationUtils.rejectIfEmpty(errors, "user_age", "required");
 		
 		//이메일이 null이거나 비어 있으면 안됨
 		if(req.getUser_email()==null||req.getUser_email().trim().isEmpty()) {

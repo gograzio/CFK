@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>    
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +15,7 @@
         		<h1>회원가입</h1>            	
                 <p>회원가입 하시면 많은 혜택을 누리실 수 있습니다.</p>                
         		</div>
-        		<form:form action="/cfk/regist" name="userInfo" modelAttribute="userInfo">
+        		<form:form action="/regist" name="userInfo" modelAttribute="userInfo">
         		<div align="center">
 					<table>
 						<tr>
@@ -46,16 +47,18 @@
 							<td><p><font color="black">지역</font></p></td>
 							<td>
 								<select name="user_area" class="span5">
-								<option >서울.경기</option>
-								<option >강원도</option>
-								<option >충청권</option>
-								<option >호남.제주</option>
-								<option >영남권</option>			
+									<option selected disabled>----지역을 선택해주세요----</option>
+									<option>서울.경기</option>
+									<option>강원도</option>
+									<option>충청권</option>
+									<option>호남.제주</option>
+									<option>영남권</option>			
 								</select>
+								<form:errors path="user_area"/>
 							</td>
 						</tr>
 						<tr>
-							<td><p><font color="black">주소</font></p></td>
+							<td><p><font color="black">나머지 주소</font></p></td>
 							<td><input class="span5" type="text" name="user_addr" value="${userInfo.user_addr}" maxlength="50">
 							<form:errors path="user_addr"/></td>
 						</tr>
@@ -66,7 +69,13 @@
 						</tr>
 						<tr>
 							<td><p><font color="black">나이</font></p></td>
-							<td><input class="span5" type="text" name="user_age" value="${userInfo.user_age}" maxlength="3"></td>
+							<td>
+								<select name="user_age" class="span5">
+									<option selected disabled>----나이를 선택해주세요----</option>
+									<c:forEach var="i" begin="5" end="100" step="1">
+										<option>${i}세</option>
+									</c:forEach>
+								</select>	
 						</tr>
 						<tr>
 							<td><p><font color="black">이메일</font></p></td>

@@ -26,7 +26,7 @@ public class UserVO {
 	public String getUser_chk_passwd() {
 		return user_chk_passwd;
 	}
-	public void setUser_chkpasswd(String user_chk_passwd) {
+	public void setUser_chk_passwd(String user_chk_passwd) {
 		this.user_chk_passwd = user_chk_passwd;
 	}
 	public void setUser_id(String user_id) {

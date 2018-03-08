@@ -26,6 +26,6 @@ public class RegisterController {
 		
 		if(result.hasErrors())
 			return "view/regist";
-		return "/cfk";
+		return "/";
 	}
 }

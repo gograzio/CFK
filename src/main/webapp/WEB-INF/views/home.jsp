@@ -104,7 +104,7 @@
                 			</div>
                		 	</div>     
                    		 <button class="message-btn" type="submit">로그인</button>
-                   		 <button class="message-btn" type="button" onclick="location.href='/cfk/regist'">회원 가입</button>
+                   		 <button class="message-btn" type="button" onclick="location.href='/regist'">회원 가입</button>
                    	</form>
                 </div>
         
